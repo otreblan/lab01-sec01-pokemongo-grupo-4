@@ -6,6 +6,10 @@ public class pokemonGo {
 
     public static void main(String[] args){
         logger.info("CS-UTEC Software Engineering I");
+
+        Tablero tablero = new Tablero();
+
+        tablero.imprimirPokemones();
     }
 
 
