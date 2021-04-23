@@ -11,11 +11,13 @@ public class Tablero {
 
     public Tablero(int initial) {
         this.matrix = new Vector<Vector<Pokemon>>(WIDTH*HEIGHT);
+        this.num_pokemones = 0;
 
         Random random = new Random();
 
         for(int i = 0; i < initial; i++) {
             this.matrix.get(random.nextInt(WIDTH*HEIGHT)).add(new Pokemon());
+            num_pokemones++;
         }
     }
 
