@@ -1,8 +1,19 @@
 import java.util.List;
+import java.util.Scanner;
 
 public class Tablero {
-    //int getCant() const;  //Obtiene la cantidad de Pokemones
-    //void setCant(int cant); //Setea la cantidad de Pokemones
+    public int getCant() {
+        Scanner scannerObj = new Scanner(System.in);
+        Integer num_pokemones = scannerObj.nextInt();
+        System.out.printf("Inserta la cantidad de Pokemones:\n");
+        while(num_pokemones<4){
+            num_pokemones = scannerObj.nextInt();
+        }
+        return num_pokemones;
+    };  //Obtiene la cantidad de Pokemones
+    public void setCant(int cant) {
+
+    }; //Setea la cantidad de Pokemones
     //static int getAltura(); // Obtiene la altura del tablero
     //static int getAncho(); //Obtiene el ancho del tablero
     //void imprimirPokemones(); //Imprime los Pokemones que se encuentran en el tablero
