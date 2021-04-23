@@ -2,6 +2,8 @@ public class Pokemon {
     private int hp;
     private char id;
     public Coordenadas coordenadas;
+    public static String name;
+    public static String type;
     public Pokemon(char id) {
         this.hp = 3;
         this.id = id;
