@@ -15,6 +15,12 @@ public class Tablero {
     public Tablero() {
         this(4);
     }
+    public static int getAltura(){
+        return WIDTH;
+    } // Obtiene la altura del tablero
+    public static int getAncho(){
+        return HEIGHT;
+    } //Obtiene el ancho del tablero
 
     public int getCant() {
         Scanner scannerObj = new Scanner(System.in);
