@@ -1,0 +1,22 @@
+import java.util.List;
+import Pokemon;
+import jdk.nashorn.api.tree.ArrayLiteralTree;
+
+public class Tablero {
+    public static int altura = 20;
+    public static int ancho = 40;
+    //int getCant() const;  //Obtiene la cantidad de Pokemones
+    //void setCant(int cant); //Setea la cantidad de Pokemones
+    static int getAltura(){
+        return altura;
+    } // Obtiene la altura del tablero
+    static int getAncho(){
+        return ancho;
+    } //Obtiene el ancho del tablero
+    //void imprimirPokemones(); //Imprime los Pokemones que se encuentran en el tablero
+    //void pintarPokemons(); //Ubica a los Pokemones en el tablero de acuerdo a sus coordenadas
+    //void reDibujarTablero(); //Reimprime el tablero con los Pokemones
+    //void registrarPokemon(); //Registrar los Pokemones
+    //void setListPokemon(Pokemon *_listPokemon); //Setea una lista de Pokemones en el tablero
+    //List<Pokemon> getListaConColisiones(); //Obtiene una lista con los Pokémones que colisionaron
+}
