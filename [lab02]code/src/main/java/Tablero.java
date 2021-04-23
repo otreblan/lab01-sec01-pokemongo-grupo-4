@@ -1,15 +1,14 @@
 import java.util.List;
-import java.util.Optional;
 import java.util.Vector;
 
 public class Tablero {
 
-    private Vector<Optional<Pokemon>> matrix;
+    private Vector<Vector<Pokemon>> matrix;
     private final static int WIDTH = 20;
     private final static int HEIGHT = 40;
 
     public Tablero(int initial) {
-        this.matrix = new Vector<Optional<Pokemon>>(WIDTH*HEIGHT);
+        this.matrix = new Vector<Vector<Pokemon>>(WIDTH*HEIGHT);
     }
 
     public Tablero() {
