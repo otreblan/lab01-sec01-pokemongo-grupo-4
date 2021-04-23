@@ -18,4 +18,9 @@ public class Pokemon {
     public char getId() {
         return id;
     }
+
+    public void fight(Pokemon foe) {
+        this.hp--;
+        foe.hp--;
+    }
 }

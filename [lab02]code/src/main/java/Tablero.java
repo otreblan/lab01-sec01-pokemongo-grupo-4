@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Vector;
@@ -67,5 +68,17 @@ public class Tablero {
     //void reDibujarTablero(); //Reimprime el tablero con los Pokemones
     //void registrarPokemon(); //Registrar los Pokemones
     //void setListPokemon(Pokemon *_listPokemon); //Setea una lista de Pokemones en el tablero
-    //List<Pokemon> getListaConColisiones(); //Obtiene una lista con los Pokémones que colisionaron
+    List<Pokemon> getListaConColisiones() { //Obtiene una lista con los Pokémones que colisionaron
+        List<Pokemon> list = new ArrayList<Pokemon>();
+        for(int i = 0; i < WIDTH*HEIGHT; i++)
+        {
+            Vector<Pokemon> cell = matrix.get(i);
+            if(cell.size() > 1) {
+                for(Pokemon pokemon: cell) {
+                    list.add(pokemon);
+                }
+            }
+        }
+        return list;
+    }
 }
