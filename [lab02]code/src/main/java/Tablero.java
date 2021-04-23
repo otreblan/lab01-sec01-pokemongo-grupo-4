@@ -23,16 +23,16 @@ public class Tablero {
     } //Obtiene el ancho del tablero
 
     public int getCant() {
+        return this.num_pokemones;
+    };  //Obtiene la cantidad de Pokemones
+    public void setCant(int cant) {
         Scanner scannerObj = new Scanner(System.in);
         Integer num_pokemones = scannerObj.nextInt();
         System.out.printf("Inserta la cantidad de Pokemones:\n");
         while(num_pokemones<4){
             num_pokemones = scannerObj.nextInt();
         }
-        return num_pokemones;
-    };  //Obtiene la cantidad de Pokemones
-    public void setCant(int cant) {
-        this.num_pokemones = getCant();
+        this.num_pokemones = num_pokemones;
     }; //Setea la cantidad de Pokemones
     //static int getAltura(); // Obtiene la altura del tablero
     //static int getAncho(); //Obtiene el ancho del tablero
