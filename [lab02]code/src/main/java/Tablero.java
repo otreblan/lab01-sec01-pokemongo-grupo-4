@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Vector;
 
 public class Tablero {
-
+    private int num_pokemones;
     private Vector<Vector<Pokemon>> matrix;
     private final static int WIDTH = 20;
     private final static int HEIGHT = 40;
@@ -26,9 +26,8 @@ public class Tablero {
         return num_pokemones;
     };  //Obtiene la cantidad de Pokemones
     public void setCant(int cant) {
-
+        this.num_pokemones = getCant();
     }; //Setea la cantidad de Pokemones
->>>>>>> 04abe46fb52cb8d85ee726f533d9177601bb13cb
     //static int getAltura(); // Obtiene la altura del tablero
     //static int getAncho(); //Obtiene el ancho del tablero
     //void imprimirPokemones(); //Imprime los Pokemones que se encuentran en el tablero
