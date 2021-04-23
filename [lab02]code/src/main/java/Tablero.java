@@ -15,6 +15,12 @@ public class Tablero {
     public Tablero() {
         this(4);
     }
+    public static int getAltura(){
+        return altura;
+    } // Obtiene la altura del tablero
+    public static int getAncho(){
+        return ancho;
+    } //Obtiene el ancho del tablero
 
     public int getCant() {
         Scanner scannerObj = new Scanner(System.in);
@@ -28,7 +34,6 @@ public class Tablero {
     public void setCant(int cant) {
 
     }; //Setea la cantidad de Pokemones
->>>>>>> 04abe46fb52cb8d85ee726f533d9177601bb13cb
     //static int getAltura(); // Obtiene la altura del tablero
     //static int getAncho(); //Obtiene el ancho del tablero
     //void imprimirPokemones(); //Imprime los Pokemones que se encuentran en el tablero
