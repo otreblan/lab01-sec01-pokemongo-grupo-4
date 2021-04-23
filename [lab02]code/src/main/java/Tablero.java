@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -10,6 +11,14 @@ public class Tablero {
 
     public Tablero(int initial) {
         this.matrix = new Vector<Vector<Pokemon>>(WIDTH*HEIGHT);
+        this.num_pokemones = 0;
+
+        Random random = new Random();
+
+        for(int i = 0; i < initial; i++) {
+            this.matrix.get(random.nextInt(WIDTH*HEIGHT)).add(new Pokemon());
+            num_pokemones++;
+        }
     }
 
     public Tablero() {
@@ -34,8 +43,6 @@ public class Tablero {
         }
         this.num_pokemones = num;
     }; //Setea la cantidad de Pokemones
-    //static int getAltura(); // Obtiene la altura del tablero
-    //static int getAncho(); //Obtiene el ancho del tablero
     //void imprimirPokemones(); //Imprime los Pokemones que se encuentran en el tablero
     //void pintarPokemons(); //Ubica a los Pokemones en el tablero de acuerdo a sus coordenadas
     //void reDibujarTablero(); //Reimprime el tablero con los Pokemones
