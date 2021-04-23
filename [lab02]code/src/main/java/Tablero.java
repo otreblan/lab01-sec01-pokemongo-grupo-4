@@ -11,6 +11,9 @@ public class Tablero {
 
     public Tablero(int initial) {
         this.matrix = new Vector<Vector<Pokemon>>(WIDTH*HEIGHT);
+        for(int i = 0; i < WIDTH*HEIGHT; i++) {
+            this.matrix.add(new Vector<Pokemon>());
+        }
         this.num_pokemones = 0;
 
         Random random = new Random();
@@ -43,7 +46,23 @@ public class Tablero {
         }
         this.num_pokemones = num_pokemones;
     }; //Setea la cantidad de Pokemones
-    //void imprimirPokemones(); //Imprime los Pokemones que se encuentran en el tablero
+    void imprimirPokemones() {//Imprime los Pokemones que se encuentran en el tablero
+        for(int i = 0; i < HEIGHT; i++) {
+            for(int j = 0; j < WIDTH ; j++) {
+                Vector<Pokemon> cell = matrix.get(i*WIDTH+j);
+
+                if(cell.isEmpty()) {
+                    System.out.print('.');
+                }
+                else {
+                    System.out.print(cell.lastElement().getId());
+                }
+
+                System.out.print(' ');
+            }
+            System.out.print('\n');
+        }
+    }
     //void pintarPokemons(); //Ubica a los Pokemones en el tablero de acuerdo a sus coordenadas
     //void reDibujarTablero(); //Reimprime el tablero con los Pokemones
     //void registrarPokemon(); //Registrar los Pokemones
