@@ -66,7 +66,16 @@ public class Tablero {
     }
     //void pintarPokemons(); //Ubica a los Pokemones en el tablero de acuerdo a sus coordenadas
     //void reDibujarTablero(); //Reimprime el tablero con los Pokemones
-    //void registrarPokemon(); //Registrar los Pokemones
+    public void registrarPokemon(){ //Registrar los Pokemones
+        while(num_pokemones>0){
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Name: ");
+            Pokemon.name = scanner.nextLine();
+            System.out.println("Type: ");
+            Pokemon.type = scanner.nextLine();
+            num_pokemones--;
+        }
+    }
     //void setListPokemon(Pokemon *_listPokemon); //Setea una lista de Pokemones en el tablero
     List<Pokemon> getListaConColisiones() { //Obtiene una lista con los Pokémones que colisionaron
         List<Pokemon> list = new ArrayList<Pokemon>();
