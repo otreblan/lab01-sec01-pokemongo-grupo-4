@@ -16,10 +16,10 @@ public class Tablero {
         this(4);
     }
     public static int getAltura(){
-        return altura;
+        return WIDTH;
     } // Obtiene la altura del tablero
     public static int getAncho(){
-        return ancho;
+        return HEIGHT;
     } //Obtiene el ancho del tablero
 
     public int getCant() {
