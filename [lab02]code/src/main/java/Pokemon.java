@@ -2,15 +2,14 @@ public class Pokemon {
     private int hp;
     private char id;
     public Coordenadas coordenadas;
-    public static String name;
-    public static String type;
-    public Pokemon(char id) {
+    public Pokemon(char id, Coordenadas coordenadas) {
         this.hp = 3;
         this.id = id;
+        this.coordenadas = coordenadas;
     }
 
     public Pokemon() {
-        this((char)('A' + (int)(Math.random()*('Z' - 'A'))));
+        this((char)('A' + (int)(Math.random()*('Z' - 'A'))), Coordenadas.RandomCoord());
     }
 
     public int getHp() {
