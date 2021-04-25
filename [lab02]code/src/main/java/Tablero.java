@@ -12,7 +12,7 @@ public class Tablero {
     public final static int WIDTH = 20;
     public final static int HEIGHT = 40;
 
-    public Tablero(int initial) {
+    public Tablero() {
         this.matrix = new Vector<Vector<Pokemon>>(WIDTH*HEIGHT);
         this.pokemonQueue = new ArrayDeque<Pokemon>();
         for(int i = 0; i < WIDTH*HEIGHT; i++) {
@@ -20,16 +20,15 @@ public class Tablero {
         }
         this.num_pokemones = 0;
 
-        for(int i = 0; i < initial; i++) {
+        setCant();
+
+        for(int i = 0; i < getCant(); i++) {
             registrarPokemon(new Pokemon());
         }
 
         pintarPokemons();
     }
 
-    public Tablero() {
-        this(4);
-    }
     public static int getAltura(){
         return WIDTH;
     } // Obtiene la altura del tablero
@@ -40,7 +39,7 @@ public class Tablero {
     public int getCant() {
         return this.num_pokemones;
     };  //Obtiene la cantidad de Pokemones
-    public void setCant(int cant) {
+    public void setCant() {
         Scanner scannerObj = new Scanner(System.in);
         Integer num = 0;
         while(num<4){
